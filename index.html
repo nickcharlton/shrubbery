@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Nick Charlton">
+    <meta name="description" content="A simple online Python environment, based on Skulpt.">
+    <title>Shrubbery &mdash; nickcharlton.net</title>
+
+    <link rel="stylesheet" type="text/css" media="all" href="static/main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools.js"></script>
+    <script src="static/mootools-1.2.3.1-more.js"></script>
+    <script src="static/env/codemirror/js/codemirror.js"></script>
+    <script src="static/env/editor.js"></script>
+    <script src="static/skulpt.js"></script>
+  </head>
+    
+  <body>
+
+    <textarea id="code" cols="85" rows="25">
+def test(name):
+    print "Hello", name
+
+test("world")
+</textarea>
+
+    <p>Output: (<a href="#" id="clearoutput">clear</a>)</p>
+    <pre id="edoutput">
+    </pre>
+
+  </body>
+</html>
+
