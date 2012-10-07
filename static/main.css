@@ -37,13 +37,18 @@ section {
     float: left;
 }
 
+#clearoutput {
+    float: right;
+    padding-right: 5px;
+}
+
 pre {
     margin: 0;
 }
 
 #edoutput {
     width: 50%;
-    height: 300px;
+    height: 283px;
     float: right;
     background: #ccc;
     overflow: auto;
