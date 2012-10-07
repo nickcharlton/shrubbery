@@ -6,7 +6,7 @@ window.addEvent('domready', function() {
         lineNumbers: true,
         textWrapping: false,
         indentUnit: 4,
-        height: "160px",
+        height: "300px",
         fontSize: "9pt",
         autoMatchParens: true,
         parserConfig: {'pythonVersion': 2, 'strictErrors': true},

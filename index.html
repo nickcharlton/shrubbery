@@ -4,29 +4,51 @@
     <meta charset="utf-8">
     <meta name="author" content="Nick Charlton">
     <meta name="description" content="A simple online Python environment, based on Skulpt.">
-    <title>Shrubbery &mdash; nickcharlton.net</title>
+    <title>Shrubbery &mdash; A Python environment for teaching programming.</title>
 
-    <link rel="stylesheet" type="text/css" media="all" href="static/main.css">
+    <!-- sensible default styles -->
+    <link rel="stylesheet" href="static/normalize.css">
+    <!-- pretty custom styles -->
+    <link rel="stylesheet" href="static/main.css">
+
+    <!-- moo tools -->
     <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools.js"></script>
     <script src="static/mootools-1.2.3.1-more.js"></script>
+    
+    <!-- codemirror for text editing -->
     <script src="static/env/codemirror/js/codemirror.js"></script>
     <script src="static/env/editor.js"></script>
+
+    <!-- skulpt for interpreting python -->
     <script src="static/skulpt.js"></script>
   </head>
     
   <body>
+    <header>
+      <h1>Shrubbery</h1>
 
-    <textarea id="code" cols="85" rows="25">
+      <nav>
+        <ul>
+          <li>Examples</li>
+          <li>GitHub</li>
+          <li>About</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <div id="editor">
+        <textarea id="code" cols="85" rows="25">
 def test(name):
     print "Hello", name
 
 test("world")
 </textarea>
+      </div>
 
-    <p>Output: (<a href="#" id="clearoutput">clear</a>)</p>
-    <pre id="edoutput">
-    </pre>
-
+      <!--<p>Press Ctrl+Enter to run. <a href="#" id="clearoutput">Clear the console</a>.</p>-->
+      <pre id="edoutput"></pre>
+   </section>
   </body>
 </html>
 

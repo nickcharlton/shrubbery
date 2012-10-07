@@ -1,3 +1,50 @@
+body {
+    font-family: "Lucida Grande", sans-serif;    
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Baskerville, serif;    
+}
+
+header h1 {
+    float: left;
+    margin: 20px 0 0 35px;
+}
+
+header nav {
+    float: right;
+    margin: 20px 50px 0 0;
+}
+
+header nav li {
+    list-style: none;
+    display: inline;
+    margin-left: 10px;
+}
+
+section {
+    clear: both;
+}
+
+#editor {
+    width: 50%;
+    float: left;
+}
+
+pre {
+    margin: 0;
+}
+
+#edoutput {
+    width: 50%;
+    height: 300px;
+    float: right;
+    background: #ccc;
+    overflow: auto;
+    font-family: Monaco, monospace;
+    font-size: 0.875em; /* 14px / 16px */
+}
+
 .CodeMirror-line-numbers {
   width: 2.2em;
   color: #aaa;
@@ -10,11 +57,3 @@
   line-height: 1.1em;
 }
 
-#edoutput {
-    background: #ccc;
-    color: #black;
-    height: 100px;
-    overflow: auto;
-    font-family: "Consolas","Lucida Console","Monaco",monospace;
-    font-size: 9pt;
-}
