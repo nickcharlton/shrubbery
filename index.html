@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="static/main.css">
 
     <!-- moo tools -->
-    <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools.js"></script>
-    <script src="static/mootools-1.2.3.1-more.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+    <script src="static/mootools-more-1.4.0.1.js"></script>
     
     <!-- codemirror for text editing -->
     <script src="static/env/codemirror/js/codemirror.js"></script>
@@ -21,6 +21,34 @@
 
     <!-- skulpt for interpreting python -->
     <script src="static/skulpt.js"></script>
+
+    <!-- link behaviour: show the examples and about boxes -->
+    <script type="text/javascript">
+      window.addEvent('domready', function() {
+          // handle the examples
+          var examplesSlide = new Fx.Slide('examples');
+
+          $('toggle_examples').addEvent('click', function(e){
+              console.log('added click event');
+              e = new Event(e);
+              examplesSlide.toggle();
+              e.stop();
+          });
+
+          // handle the about
+          var aboutSlide = new Fx.Slide('about');
+
+          $('toggle_about').addEvent('click', function(e){
+              e = new Event(e);
+              aboutSlide.toggle();
+              e.stop();
+          });
+
+          // hide both by default
+          examplesSlide.hide();
+          aboutSlide.hide();
+      });
+    </script>
   </head>
     
   <body>
@@ -29,12 +57,33 @@
 
       <nav>
         <ul>
-          <li>Examples</li>
-          <li>GitHub</li>
-          <li>About</li>
+          <li><a href="#" id="clearoutput">Clear</a></li>
+          <li><a href="#" id="toggle_examples">Examples</a></li>
+          <li><a href="https://github.com/nickcharlton/shrubbery">GitHub</a></li>
+          <li><a href="#" id="toggle_about">About</a></li>
         </ul>
       </nav>
     </header>
+
+    <section id="accordion">
+      <div id="examples">
+        <p>It's hard to learn stuff without example. Here's a bunch. It'll replace everything you have in the text editor. Ideas for another? <a href="https://github.com/nickcharlton/shrubbery/issues">Post one to the issue tracker</a>.</p>
+
+        <ul>
+          <li>Hello World!</li>
+          <li>Hello World! (with functions.)</li>
+          <li>Fibonnaci Sequence</li>
+        </ul>
+      </div>
+
+      <div id="about">
+        <p>Shrubbery is an online Python environment for teaching programming. It aims to solve the problem of having to setup any sort of environment on shared computers for teaching programming. Instead it provides a text editor and Python interpreter in the browser.</p>
+
+        <p>It's based upon <a href="http://www.skulpt.org">Skulpt</a> for the Python interpreter and <a href="http://codemirror.net">CodeMirror</a> for the text editor. It also has well documented examples to show you what you can do.</p>
+
+        <p>It was thrown together in a few days for an introductory Python tutorial <a href="http://nickcharlton.net/">I</a> was teaching. It's licensed under the MIT license and it's on <a href="https://github.com/nickcharlton/shrubbery">GitHub</a> (probably with multiple issues).
+      </div>
+    </section>
 
     <section>
       <div id="editor">

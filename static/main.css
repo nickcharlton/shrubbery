@@ -26,6 +26,12 @@ section {
     clear: both;
 }
 
+#accordion {
+    width: 75%;
+    margin: 0 auto;
+    font-size: 0.875em; /* 16px / 16px */
+}
+
 #editor {
     width: 50%;
     float: left;
